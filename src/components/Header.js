@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { StyledHeader } from './styles/Header.styled';
+import SearchMovies from './SearchMovies'
 
 export default function Header() {
     return (
@@ -27,6 +28,7 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
+                <SearchMovies />
             </StyledHeader>
 
         </>

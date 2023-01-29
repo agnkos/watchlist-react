@@ -10,7 +10,9 @@ function App() {
     <Container>
       <GlobalStyles />
       <Header />
-      <Main><Home /></Main>
+      <Main>
+        <Home />
+      </Main>
       <Footer />
     </Container>
   );

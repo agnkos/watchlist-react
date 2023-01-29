@@ -11,6 +11,10 @@ body {
     margin: 0;
     padding: 0;
 }
+p, h3 {
+  margin: 0;
+  padding: 0;
+}
 a {
   text-decoration: none;
 }
