@@ -11,7 +11,8 @@ export const HomeStyled = styled.div`
         font-weight: 700;
     }
 
-    i,p {
+    i,
+    p {
         color: #DFDDDD;
     }
 `

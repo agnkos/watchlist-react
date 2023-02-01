@@ -14,18 +14,18 @@ export const SearchBarStyled = styled.div`
     transform: translateY(50%);
 
     i { 
-    color: #9CA3AF;
-    margin: 0 .75em;
-    width: 5%;
+        color: #9CA3AF;
+        margin: 0 .75em;
+        width: 5%;
     }
 
     input {
-    width: 70%;
-    border: none;
-    outline: none;
-    color: #6B7280;
-    font-size: 1rem;
-    height: 100%;
+        width: 70%;
+        border: none;
+        outline: none;
+        color: #6B7280;
+        font-size: 1rem;
+        height: 100%;
     }
 
     div {

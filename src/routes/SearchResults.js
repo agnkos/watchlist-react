@@ -1,14 +1,14 @@
 import { Context } from '../Context';
 import { useContext } from 'react';
-import { HomeStyled } from "../components/styles/Home.styled";
+import { HomeStyled } from '../components/styles/Home.styled';
 import MovieCard from '../components/MovieCard';
 
 export default function SearchResults() {
-    const { movies, query } = useContext(Context);
+    const { movies } = useContext(Context);
 
     const movieElements = movies.map(movie => (
         <MovieCard key={movie.id} movie={movie} />
-    ))
+    ));
 
     return (
         <>

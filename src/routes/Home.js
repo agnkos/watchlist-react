@@ -1,4 +1,4 @@
-import { HomeStyled } from "../components/styles/Home.styled"
+import { HomeStyled } from '../components/styles/Home.styled'
 
 export default function Home() {
     return (

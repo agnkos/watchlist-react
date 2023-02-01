@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Context } from '../Context';
 import MovieCard from '../components/MovieCard';
+import { HomeStyled } from '../components/styles/Home.styled';
 
 export default function Favorites() {
 
@@ -9,9 +10,10 @@ export default function Favorites() {
     const favoritesHtml = favorites.map(movie => <MovieCard key={movie.id} movie={movie} />);
 
     return (
-        <div>
-            <h1>My favorites</h1>
+        <>
+            {favorites.length === 0 &&
+                <HomeStyled><p>Place for your favorite movies</p></HomeStyled>}
             {favoritesHtml}
-        </div>
+        </>
     )
 }

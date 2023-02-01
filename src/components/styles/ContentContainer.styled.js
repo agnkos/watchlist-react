@@ -5,6 +5,11 @@ export const ContentContainer = styled.div`
     padding-top: 3em;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    position: relative;
+
+    @media (max-width: 450px) {
+        padding: 1em;
+        padding-top: 2em;
+    }
 `

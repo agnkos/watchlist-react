@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MovieCardStyled = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 100px 1fr;
     grid-teplate-rows: repeat(2, auto);
     align-items: center;
     justify-content: start;
@@ -10,13 +10,18 @@ export const MovieCardStyled = styled.div`
     padding: 2em 0;
     border-bottom: 1.5px solid #E5E7EB;
 
-    &:last-child {
+    &:last-of-type {
         border: 0;
+        padding-bottom: 0;
     }
-
+    .overview {
+        grid-column: 2 / 3;
+        // grid-row: 1 / 2;
+    }
     img {
         width: 100px;
         max-width: 100px;
+        grid-row: 1 / 3;
     }
 
     > div {
@@ -37,9 +42,30 @@ export const MovieCardStyled = styled.div`
         margin-bottom: 2px;
     }
 
-    p {
+    p:last-of-type {
         font-size: .9rem;
-        max-height: 100px;
-        overflow: hidden;
+    }
+
+    .show {
+        margin-left: .5em;
+        font-size: .8rem;
+        font-style: italic;
+        cursor: pointer;
+        font-weight: 500;
+        color: #9CA3AF;
+    }
+
+    @media(max-width: 450px) {
+        padding: 1em 0;
+        grid-template-rows: repeat(3, auto);
+        gap: .5em;
+
+        .overview {
+            grid-column: 1 / span 2;
+        }
+
+        > div {
+            grid-row: 1 / 3;
+        }
     }
 `

@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { StyledHeader } from './styles/Header.styled';
-import SearchMovies from './SearchMovies'
+import SearchMovies from './SearchMovies';
 
 export default function Header() {
+
+    const activeStyle = {
+        color: "#ffbe0b",
+        borderBottom: "2px solid #ffbe0b",
+        paddingBottom: ".25em",
+    }
+    
     return (
         <>
             <StyledHeader>
@@ -12,19 +19,19 @@ export default function Header() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/queue">
+                            <NavLink to="/queue" style={({ isActive }) => isActive ? activeStyle : undefined}>
                                 <i className="fa-solid fa-list"></i>Queue
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/watched">
+                            <NavLink to="/watched" style={({ isActive }) => isActive ? activeStyle : undefined}>
                                 <i className="fa-solid fa-square-check"></i>Watched
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/favorites">
+                            <NavLink to="/favorites" style={({ isActive }) => isActive ? activeStyle : undefined}>
                                 <i className="fa-solid fa-heart"></i>Favorites
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

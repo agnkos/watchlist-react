@@ -1,25 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
-import { ContentContainer } from "./styles/ContentContainer.styled";
+import { ContentContainer } from './styles/ContentContainer.styled';
 import Home from '../routes/Home';
 import Queue from '../routes/Queue';
 import Watched from '../routes/Watched';
 import Favorites from '../routes/Favorites';
 import SearchResults from '../routes/SearchResults';
-// import { Context } from '../Context';
-// import { useContext} from 'react';
+import ButtonUp from './ButtonUp';
 
 export default function Main() {
-    // const { movies } = useContext(Context);
-
-
-
-
-    // const movieElements = movies.map(movie => {
-    //     console.log(movie.title)
-    //     return `${movie.title}`
-    // }
-    // )
-
 
     return (
         <ContentContainer>
@@ -30,6 +18,7 @@ export default function Main() {
                 <Route path="watched" element={<Watched />}></Route>
                 <Route path="favorites" element={<Favorites />}></Route>
             </Routes>
+            <ButtonUp />
         </ContentContainer>
     )
 }

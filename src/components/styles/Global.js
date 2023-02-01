@@ -1,23 +1,31 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-*,
-*::before,
-*::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
-  }
-body {
+}
+
+  body {
     font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
+    padding-left: calc(100vw - 100%);
 }
-p, h3 {
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-`
 
+  p, 
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display:block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
 export default GlobalStyles;
