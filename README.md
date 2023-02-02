@@ -3,7 +3,7 @@
 #### React version of my watchlist project in Vanilla JS ([link to the project](https://github.com/agnkos/watchlist)) with some extra functionalities.
 
 ### Project screenshot: 
-<img src='./public/images/Screenshot_1.png' alt="page screenshot" title="page screenshot" style='max-width: 300px; margin: 0 auto;'> 
+<img src='./public/images/Screenshot_1.png' alt="page screenshot" title="page screenshot" style='width: 400px; margin: 0 auto;'> 
 
 **Project page**:
 [Watchlist - netlify link](https://watchlist-reactjs.netlify.app/)
