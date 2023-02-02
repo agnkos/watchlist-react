@@ -20,15 +20,13 @@ function ContextProvider({ children }) {
 
     function searchMovies() {
         page = 1;
-        const url = `https://api.themoviedb.org/3/search/multi?api_key=/ your API key /&language=en-US&query=${query}&page=${page}
+        const url = `https://api.themoviedb.org/3/search/multi?api_key=/ * API key* /&language=en-US&query=${query}&page=${page}
         &include_adult=false`;
         setMovies([]);
         if (query !== '') {
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
-                    console.log(data.total_pages)
                     if (data.total_pages < 2) {
                         setQuery('');
                     }
@@ -38,12 +36,12 @@ function ContextProvider({ children }) {
                         totalPages = data.total_pages;
                     }
                 }
-                )
+                );
         }
     }
     const handleGetMoreMovies = useCallback(
         () => {
-            fetch(`https://api.themoviedb.org/3/search/multi?api_key=/ your API key /&language=en-US&query=${query}&page=${page}&include_adult=false`)
+            fetch(`https://api.themoviedb.org/3/search/multi?api_key=/* API key */&language=en-US&query=${query}&page=${page}&include_adult=false`)
                 .then(res => res.json())
                 .then(data => {
                     const searchResults = data.results.filter(item => item.media_type !== 'person');
@@ -54,11 +52,12 @@ function ContextProvider({ children }) {
 
     useEffect(() => {
         function loadMoreMovies() {
+            if (page === totalPages) setQuery('');
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 if (page < totalPages) {
                     page += 1;
                     handleGetMoreMovies();
-                } else setQuery('');
+                }
             }
         }
 
